@@ -4,5 +4,11 @@
   "description": "Browser extension for Data2",
   "main": "extension.ts",
   "license": "ISC",
-  "private": true
+  "private": true,
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
+  "devDependencies": {
+    "rollup": "^2.45.2"
+  }
 }
