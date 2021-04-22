@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Data2",
+  "version": "1.0",
+  "description": "A browser extension to preserve your personal data privacy",
+  "icons": {
+    "48": "{{BUILD_REPLACE_MANIFEST_ICON_48}}",
+    "96": "{{BUILD_REPLACE_MANIFEST_ICON_96}}"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*"
+      ],
+      "js": [
+        "{{BUILD_REPLACE_MANIFEST_ENTRYPOINT}}"
+      ]
+    }
+  ]
+}
