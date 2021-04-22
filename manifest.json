@@ -4,8 +4,8 @@
   "version": "1.0",
   "description": "A browser extension to preserve your personal data privacy",
   "icons": {
-    "48": "{{BUILD_REPLACE_MANIFEST_ICON_48}}",
-    "96": "{{BUILD_REPLACE_MANIFEST_ICON_96}}"
+    "48": "{{BUILD_REPLACE_MANIFEST_ICON_DIR}}/48.png",
+    "96": "{{BUILD_REPLACE_MANIFEST_ICON_DIR}}/96.png"
   },
   "content_scripts": [
     {
