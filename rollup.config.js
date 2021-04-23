@@ -1,6 +1,9 @@
 import path from 'path';
 import copy from 'rollup-plugin-copy';
 import replace from '@rollup/plugin-replace';
+import typescript from '@rollup/plugin-typescript';
+import nodeResolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 
 const entrypoint = path.resolve(__dirname, './src/extension.ts');
 const manifestPath = path.resolve(__dirname, './manifest.json');
@@ -20,9 +23,12 @@ export default {
   input: entrypoint,
   output: {
     file: outputEntrypoint,
-    format: 'iife',
+    format: 'cjs',
   },
   plugins: [
+    typescript(),
+    commonjs(),
+    nodeResolve(),
     copy({
       targets: [
         { src: manifestPath, dest: outputDir },
