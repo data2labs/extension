@@ -10,7 +10,7 @@ export class Presenter {
   present(proxies: ProxyRecord[]) {
     this.#replaceAll(proxies);
     const observer = this.#createObserver(proxies);
-    observer.observe(this.scope, { childList: true, subtree: true });
+    observer.observe(this.scope, { childList: true });
   }
 
   #replace(proxy: ProxyRecord, scope = this.scope) {
